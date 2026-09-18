@@ -13,5 +13,18 @@
     window.location.replace(urls[Math.floor(Math.random() * urls.length)]);
   </script>
 </head>
-<body></body>
+<body>
+  <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+  <script>
+    // Fallback: update link href if script reached body execution
+  const urls = [
+      "https://vsg-survey-a.streamlit.app/".
+      "https://vsg-survey-b.streamlit.app/".
+      "https://vsg-survey-c.streamlit.app/".
+      "https://vsg-survey-d.streamlit.app/".
+      "https://vsg-survey-e.streamlit.app/"
+      ];
+    document.getElementById("redirect-link").href = urls[Math.floor(Math.random() * urls.length)];
+  </script>
+</body>
 </html>
